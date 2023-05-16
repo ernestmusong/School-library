@@ -2,6 +2,7 @@ class Person < Nameable
   attr_accessor :id, :name, :age, :parent_permission
 
   def initialize(name: 'Unknown', age: 0, parent_permission: true)
+    super()
     @id = SecureRandom.uuid
     @name = name
     @age = age
@@ -22,7 +23,7 @@ class Person < Nameable
   end
 end
 
-person = Person.new("John Doe")
+person = Person.new('John Doe')
 
 decorator = Decorator.new(person)
 

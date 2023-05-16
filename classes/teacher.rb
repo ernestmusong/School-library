@@ -1,3 +1,4 @@
+require_relative 'nameable'
 class Teacher < Person
   attr_reader :specialization
 

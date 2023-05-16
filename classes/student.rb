@@ -1,3 +1,4 @@
+require_relative 'nameable'
 class Student < Person
   attr_reader :classroom
 

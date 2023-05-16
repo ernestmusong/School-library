@@ -1,7 +1,10 @@
-require_relative '../classes/nameable'
+require 'securerandom'
+require_relative 'nameable'
+require_relative '../decorators/capitalize_decorator'
+require_relative '../decorators/trimer_decorator'
 
 class Person < Nameable
-  attr_accessor :name, :age, :parent_permission
+  attr_accessor :name, :age
   attr_reader :id
 
   def initialize(name: 'Unknown', age: 0, parent_permission: true)
@@ -26,9 +29,9 @@ class Person < Nameable
   end
 end
 
-person = Person.new('John Doe')
-
-decorator = Decorator.new(person)
-
-puts decorator.correct_name
-# => "John Doe"
+person = Person.new(name: 'maximilianus', age: 22)
+puts person.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+puts capitalized_person.correct_name
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+puts capitalized_trimmed_person.correct_name

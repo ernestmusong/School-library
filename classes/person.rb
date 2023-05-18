@@ -2,10 +2,11 @@ require 'securerandom'
 require_relative 'nameable'
 require_relative '../decorators/capitalize_decorator'
 require_relative '../decorators/trimer_decorator'
+require_relative 'rental'
 
 class Person < Nameable
-  attr_accessor :name, :age
-  attr_reader :id, :rentals
+  attr_accessor :name, :age, :rentals
+  attr_reader :id
 
   def initialize(name: 'Unknown', age: 0, parent_permission: true)
     super()
@@ -27,6 +28,10 @@ class Person < Nameable
   # This method inherits from the Nameable class
   def correct_name
     @name
+  end
+
+  def add_rental(date, book)
+    Rental.new(date, book, self)
   end
 end
 

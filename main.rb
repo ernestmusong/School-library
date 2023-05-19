@@ -5,7 +5,7 @@ class Main
     @app = App.new
   end
   puts "Welcome to School Library\n\n"
-  puts "Please choose and option by entering a number!\n"
+  puts "Please choose an option by entering a number!\n"
   def options
     puts '1 - List all books'
     puts '2 - List all people'
@@ -16,27 +16,19 @@ class Main
     puts '7 - Exit'
   end
 
-  def run_app
+  def run
     loop do
       options
-
       input = gets.chomp
-
       case input.to_i
-      when 1
-        @app.list_books
-      when 2
-        @app.list_people
-      when 3
-        @app.create_person
-      when 4
-        @app.create_book
-      when 5
-        @app.create_rental
-      when 6
-        @app.list_rentals
+      when 1 then @app.list_books
+      when 2 then @app.list_people
+      when 3 then @app.create_person
+      when 4 then @app.create_book
+      when 5 then @app.create_rental
+      when 6 then @app.list_rentals
       when 7
-        puts "Thank you for using School Library!"
+        puts 'Thank you for using School Library App!'
         return
       end
     end
@@ -44,4 +36,4 @@ class Main
 end
 
 main = Main.new
-main.run_app
+main.run

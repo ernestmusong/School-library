@@ -14,6 +14,7 @@ class App
   def list_books
     if @books.empty?
       puts 'There is no book.'
+      puts "Please choose an option by entering a number!\n"
       return
     end
     @books.each do |book|
@@ -24,6 +25,7 @@ class App
   def list_people
     if @people.empty?
       puts 'There are no people.'
+      puts "Please choose an option by entering a number!\n"
       return
     end
     @people.each do |p|
@@ -42,6 +44,7 @@ class App
       create_teacher
     else
       puts 'Invalid input, person not created'
+      puts "Please choose an option by entering a number!\n"
     end
   end
 
@@ -53,7 +56,8 @@ class App
     print 'Has parent permission? [Y/N]:  '
     permission = gets.chomp.downcase
     @people << Student.new(name: name, age: age, parent_permission: permission)
-    puts 'Student created successfully!'
+    puts "Student created successfully!\n\n"
+    puts "Please choose an option by entering a number!\n"
   end
 
   def create_teacher
@@ -64,7 +68,8 @@ class App
     print 'Specialization:  '
     specialization = gets.chomp
     @people << Teacher.new(name: name, age: age, specialization: specialization)
-    puts 'Teacher created successfully!'
+    puts "Teacher created successfully!\n\n"
+    puts "Please choose an option by entering a number!\n"
   end
 
   def create_book
@@ -73,7 +78,8 @@ class App
     puts 'Author:'
     author = gets.chomp
     @books << Book.new(title, author)
-    puts 'Book created successfuly!'
+    puts "Book created successfuly!\n\n"
+    puts "Please choose an option by entering a number!\n"
   end
 
   def create_rental
@@ -100,7 +106,7 @@ class App
       date = gets.chomp
 
       @rentals << Rental.new(date, @books[book_index], @people[person_index])
-      puts 'Rental created successfully'
+      puts "Rental created successfully\n\n"
     end
   end
 
@@ -110,9 +116,14 @@ class App
 
     rentals = @rentals.filter { |rental| rental.person.id == id }
 
-    puts 'Rentals:'
-    rentals.each do |rental|
-      puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
+    if rentals.empty?
+      puts 'There are currently no rentals for this person!'
+    else
+      puts 'Rentals:'
+      rentals.each do |rental|
+        puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
+      end
     end
+    puts "Please choose an option by entering a number!\n"
   end
 end

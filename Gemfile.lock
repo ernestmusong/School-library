@@ -28,7 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rubocop (>= 1.0, < 2.0)
+  rubocop
 
 BUNDLED WITH
    2.1.4

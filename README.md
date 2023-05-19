@@ -82,7 +82,7 @@ sh
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Intend to use this app a framework]**
+- [ ] **[Intend to use this app with a framework]**
 - [ ] **[Intend to add email field]**
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -64,7 +64,7 @@ sh
  Run: bundle install
 
  ### Start:
- Run: ruby person.rb
+ Run: ruby main.rb
 
  
 
@@ -80,11 +80,18 @@ sh
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Intend to use this app with a framework]**
+- [ ] **[Intend to add email field]**
+ 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ernestmusong/https://github.com/ernestmusong/School-library/issues).
+Feel free to check the [issues page](https://github.com/ernestmusong/School-library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

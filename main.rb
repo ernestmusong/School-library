@@ -1,12 +1,12 @@
 require_relative './classes/app'
 require_relative './modules/options'
-require_relative './modules/presentations.rb'
-require_relative './modules/ui_methods.rb'
+require_relative './modules/presentations'
+require_relative './modules/ui_methods'
 
 class Main
-include Options
-extend Presentations
-include UI
+  include Options
+  extend Presentations
+  include UI
 
   def initialize
     @app = App.new

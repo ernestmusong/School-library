@@ -1,8 +1,5 @@
-require_relative '../classes/app.rb'
-
 module UI
-  def options_input app
-    # app = App.new
+  def options_input(app)
     input = gets.chomp
     case input.to_i
     when 1 then app.list_books

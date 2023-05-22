@@ -44,6 +44,7 @@
 - **[Add new teacher]**
 - **[Add new book]**
 - **[Save records of who borrowed a given book and when]**
+- **[Refactored the code to meet the best practices]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,6 +84,13 @@ sh
 - GitHub: [@Matthieu96Code](https://github.com/Matthieu96Code)
 - Twitter: [@MatthieuSENOU](https://twitter.com/MatthieuSenou)
 - LinkedIn: [Kodjo Matthieu SENOU](https://www.linkedin.com/in/kodjo-matthieu-senou/)
+
+
+👤 **Oussama Elabdioui**
+
+- GitHub: [@codedit334](https://github.com/codedit334)
+- Twitter: [@oussedit](https://twitter.com/oussedit)
+- LinkedIn: [Oussama Elabdioui](https://www.linkedin.com/in/oussama-elabdioui-4677a41b6/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,24 +1,23 @@
-require_relative './classes/app'
-require_relative './modules/UIMethods'
-require_relative './modules/options'
-require_relative './modules/presentations'
+require './classes/app'
+require './modules/ui_methods'
+require './modules/options'
+require './modules/presentations'
 
 class Main
   include Options
-  include Presentations
-  include UIMethods
-  
+  extend Presentations
+  include UI
+
   def initialize
     @app = App.new
   end
 
   presentations
-  
+
   def run
     loop do
       options
-      get_options
-
+      options_input
     end
   end
 end

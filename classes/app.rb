@@ -102,7 +102,7 @@ class App
 
       person_index = gets.chomp.to_i
 
-      print 'Date: yy-mm-dd '
+      print 'Date: '
       date = gets.chomp
 
       @rentals << Rental.new(date, @books[book_index], @people[person_index])

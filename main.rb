@@ -1,4 +1,4 @@
-require './classes/app'
+# require './classes/app'
 require './modules/ui_methods'
 require './modules/options'
 require './modules/presentations'

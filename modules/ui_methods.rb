@@ -1,4 +1,4 @@
-require '../classes/app'
+require_relative '../classes/app.rb'
 
 module UI
   def options_input
@@ -13,7 +13,7 @@ module UI
     when 6 then app.list_rentals
     when 7
       puts 'Thank you for using School Library App!'
-      nil
+      exit
     end
   end
 end

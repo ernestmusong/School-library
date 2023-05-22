@@ -1,6 +1,7 @@
 require_relative '../classes/app.rb'
 
 module UI
+  
   def options_input app
     # app = App.new
     input = gets.chomp

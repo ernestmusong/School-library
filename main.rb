@@ -1,14 +1,17 @@
 require_relative './classes/app'
 require_relative './modules/options'
+require_relative './modules/presentations'
 
 class Main
-include Options
+  include Options
+  include Presentations
+  
   def initialize
     @app = App.new
   end
-  puts "Welcome to School Library\n\n"
-  puts "Please choose an option by entering a number!\n"
 
+  presentations
+  
   def run
     loop do
       options

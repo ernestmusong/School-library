@@ -78,6 +78,12 @@ sh
 - Twitter: [@MusongAkeh](https://twitter.com/MusongAkeh)
 - LinkedIn: [Musong Ernest](https://www.linkedin.com/in/musongernestakeh/)
 
+👤 **SENOU Kodjo Matthieu**
+
+- GitHub: [@Matthieu96Code](https://github.com/Matthieu96Code)
+- Twitter: [@MatthieuSENOU](https://twitter.com/MatthieuSenou)
+- LinkedIn: [Kodjo Matthieu SENOU](https://www.linkedin.com/in/kodjo-matthieu-senou/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>

@@ -4,11 +4,13 @@ require_relative 'book'
 require_relative 'teacher'
 require_relative 'rental'
 
+require 'json'
+
 class App
   def initialize
     @people = []
     @books = []
-    @rentals = []
+    @rentals = JSON.parse(File.read('./data/rentals.json')) || []
   end
 
   def list_books
@@ -104,24 +106,33 @@ class App
 
       print 'Date: '
       date = gets.chomp
-
-      @rentals << Rental.new(date, @books[book_index], @people[person_index])
+      p @rentals
+      rental = Rental.new(date, @books[book_index], @people[person_index])
+      @rentals << rental.to_h
+      File.write('./data/rentals.json', JSON.generate(@rentals))
       puts "Rental created successfully\n\n"
     end
   end
 
   def list_rentals
+    @rentals = JSON.parse(File.read("./data/rentals.json")) if File.exist?("./data/rentals.json")
+    
+    if(@rentals.empty?)
+      p "There are currently no rentals."
+      return
+    end
+
     print 'ID of person: '
     id = gets.chomp.to_i
 
-    rentals = @rentals.filter { |rental| rental.person.id == id }
+    rentals = @rentals.filter { |rental| rental["person"]["id"] == id }
 
     if rentals.empty?
       puts 'There are currently no rentals for this person!'
     else
       puts 'Rentals:'
       rentals.each do |rental|
-        puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
+        puts "Date: #{rental["date"]}, Book '#{rental["book"]["title"]}' by #{rental["book"]["author"]}"
       end
     end
     puts "Please choose an option by entering a number!\n"

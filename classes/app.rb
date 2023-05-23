@@ -8,7 +8,7 @@ require 'json'
 
 class App
   def initialize
-    @people = []
+    @people = JSON.parse(File.read('./data/people.json')) || []
     @books = []
     @rentals = JSON.parse(File.read('./data/rentals.json')) || []
   end
@@ -25,13 +25,14 @@ class App
   end
 
   def list_people
+    @people = JSON.parse(File.read('./data/people.json')) if File.exist?('./data/people.json')
     if @people.empty?
       puts 'There are no people.'
       puts "Please choose an option by entering a number!\n"
       return
     end
     @people.each do |p|
-      puts "[#{p.class}] Name: #{p.name}, ID: #{p.id}, Age: #{p.age}"
+      puts "[#{p['class']}] Name: #{p['name']}, ID: #{p['id']}, Age: #{p['age']}"
     end
   end
 
@@ -57,7 +58,9 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]:  '
     permission = gets.chomp.downcase
-    @people << Student.new(name: name, age: age, parent_permission: permission)
+    student = Student.new(name: name, age: age, parent_permission: permission).to_h
+    @people << student.merge!(class: 'Student')
+    File.write('./data/people.json', JSON.generate(@people))
     puts "Student created successfully!\n\n"
     puts "Please choose an option by entering a number!\n"
   end
@@ -66,10 +69,12 @@ class App
     print 'Age: '
     age = gets.chomp.to_i
     print 'Name: '
-    name = gets.chomp
+    name = gets.chomp.to_i
     print 'Specialization:  '
     specialization = gets.chomp
-    @people << Teacher.new(name: name, age: age, specialization: specialization)
+    teacher = Teacher.new(name: name, age: age, specialization: specialization).to_h
+    @people << teacher.merge!(class: 'Teacher')
+    File.write('./data/people.json', JSON.generate(@people))
     puts "Teacher created successfully!\n\n"
     puts "Please choose an option by entering a number!\n"
   end

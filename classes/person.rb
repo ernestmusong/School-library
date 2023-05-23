@@ -34,7 +34,11 @@ class Person < Nameable
     Rental.new(date, book, self)
   end
 
-  def to_h
-    { id: @id, name: @name, age: @age, rentals: @rentals.map(&:to_h) }
+  def add_person_to_book
+    { id: @id, name: @name, age: @age }
+  end
+
+  def to_h_rental
+    { id: @id, name: @name, age: @age, rentals: @rentals }
   end
 end

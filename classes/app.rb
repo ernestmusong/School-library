@@ -103,9 +103,9 @@ class App
       end
 
       person_index = gets.chomp.to_i
-
+      p 'Enter date of rental (YYYY-MM-DD): '
       date = gets.chomp
-      @rentals << Rental.new(date, @books[book_index], @people[person_index]).to_h
+      @rentals << Rental.new(date, @books[book_index], @people[person_index]).to_h_rental
       File.write('./data/rentals.json', JSON.generate(@rentals))
       puts "Rental created successfully\n\n"
     end

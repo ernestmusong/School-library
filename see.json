@@ -1,0 +1,55 @@
+[
+    {
+      "date": "22",
+      "person": {
+        "id": 872,
+        "name": "99",
+        "age": 99,
+        "rentals": []
+      }
+    },
+    {
+      "date": "22",
+      "book": {
+        "title": "00",
+        "author": "00",
+        "rentals": [
+          {
+            "date": "22",
+            "person": {
+              "id": 432,
+              "name": "00",
+              "age": 0,
+              "rentals": []
+            }
+          }
+        ]
+      },
+      "person": {
+        "id": 432,
+        "name": "00",
+        "age": 0,
+        "rentals": [
+          {
+            "date": "22",
+            "book": {
+              "title": "00",
+              "author": "00",
+              "rentals": [
+                {
+                  "date": "22",
+                  "person": {
+                    "id": 432,
+                    "name": "00",
+                    "age": 0,
+                    "rentals": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+  

@@ -12,7 +12,11 @@ class Book
     rental.book = self
   end
 
-  def to_h
-    { title: @title, author: @author, rentals: @rentals.map(&:to_h) }
+  def add_book_to_person
+    { title: @title, author: @author}
+  end
+  
+  def to_h_rental
+    { title: @title, author: @author, rentals: @rentals }
   end
 end

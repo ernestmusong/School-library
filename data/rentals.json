@@ -1,1 +1,1 @@
-[{"date":"0","book":{"title":"0","author":"0","rentals":[]},"person":{"id":837,"name":"0","age":0,"rentals":[]}},{"date":"","book":{"title":"1","author":"1","rentals":[]},"person":{"id":461,"name":"1","age":1,"rentals":[]}}]
+[{"date":"2022","book":{"title":"22","author":"22","rentals":[{"id":65,"name":"22","age":22}]},"person":{"id":65,"name":"22","age":22,"rentals":[{"title":"22","author":"22"}]}},{"date":"2033","book":{"title":"33","author":"33","rentals":[{"id":664,"name":"33","age":33}]},"person":{"id":664,"name":"33","age":33,"rentals":[{"title":"33","author":"33"}]}}]

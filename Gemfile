@@ -5,3 +5,6 @@ gem 'rubocop'
 
 # Pry
 gem 'pry', '~> 0.13.1'
+
+# RSPEC
+gem "rspec"

@@ -7,4 +7,4 @@ gem 'rubocop'
 gem 'pry', '~> 0.13.1'
 
 # RSPEC
-gem "rspec"
+gem 'rspec'

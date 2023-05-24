@@ -11,4 +11,8 @@ class Book
     @rentals << rental unless @rentals.include?(rental)
     rental.book = self
   end
+
+  def to_h
+    { title: @title, author: @author, rentals: @rentals.map(&:to_h) }
+  end
 end

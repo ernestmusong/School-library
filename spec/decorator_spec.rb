@@ -9,7 +9,4 @@ describe Decorator do
   it 'returns correct nameable' do 
     expect(name.correct_name).to eq('aldous_Huxley')
   end
-  # it 'raises an error' do 
-  #   expect { name.correct_name }.to raise_error
-  # end
 end

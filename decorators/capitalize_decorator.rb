@@ -7,6 +7,6 @@ class CapitalizeDecorator < Decorator
   end
 
   def correct_name
-    @nameable.correct_name.capitalize
+    @nameable.capitalize
   end
 end

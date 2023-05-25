@@ -2,7 +2,7 @@ require './decorators/capitalize_decorator'
 
 describe Decorator do
   name = CapitalizeDecorator.new('aldous_Huxley')
-  context "given an instance" do
+  context 'given an instance' do
     it 'returns correct title' do
       expect(name.nameable).to eq('aldous_Huxley')
     end
